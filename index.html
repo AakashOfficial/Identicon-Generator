@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <script src="https://cdn.rawgit.com/dmester/jdenticon/5bbdf8cb/dist/jdenticon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" src="index.css" />
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <h3>My Identicon Generator</h3>
+
+        <div>
+            Input:
+            <input v-on:input="onInput" />
+        </div>
+
+        <div>
+            Output:
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            methods: {
+                onInput: function() {
+                    console.log("Someone Typed Something");
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
