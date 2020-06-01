@@ -22,15 +22,24 @@
 
         <div>
             Output:
+            <div v-html="identicon"></div>
         </div>
     </div>
 
     <script>
         new Vue({
             el: '#app',
+            data: {
+                textInput: ''
+            },
+            computed: {
+                identicon: function() {
+                    return jdenticon.toSvg(this.textInput, 200);
+                }
+            },
             methods: {
-                onInput: function() {
-                    console.log("Someone Typed Something");
+                onInput: function(event) {
+                    this.textInput = event.target.value;
                 }
             }
         });
